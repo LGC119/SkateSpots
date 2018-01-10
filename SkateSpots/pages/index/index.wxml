@@ -1,14 +1,7 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
-      <map bindmarkertap='markertap' longitude='北京经度' latitude='北京纬度'></map>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view class='container'>
+  <view class='map-header'></view>
+  <view class='map-content'>
+    <map id='map' bindmarkertap='markertap' controls="{{controls}}" scale="14" show-location="true" bindcontroltap="controlTap"  markers="{{markers}}" bindmarkertap="handleMarkerTap"></map>
   </view>
 </view>

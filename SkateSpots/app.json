@@ -1,12 +1,42 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "navigationBarTitleText": "Demo"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "backgroundColor": "#000",
+    "selectedColor": "#FF8B67",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "resources/center.png",
+      "selectedIconPath": "resources/center.png",
+      "text": "地图"
+    }, {
+      "pagePath": "pages/list/list",
+      "iconPath": "resources/center.png",
+      "selectedIconPath": "resources/center.png",
+      "text": "列表模式"
+    }, {
+      "pagePath": "pages/publish/publish",
+      "iconPath": "resources/center.png",
+      "selectedIconPath": "resources/center.png",
+      "text": "排行"
+    }, {
+      "pagePath": "pages/user/user",
+      "iconPath": "resources/center.png",
+      "selectedIconPath": "resources/center.png",
+      "text": "用户"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
