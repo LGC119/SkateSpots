@@ -1,8 +1,7 @@
 // ajax
 function sendRequest(path, data, method, callback) {
     wx.request({
-        url: 'https://test.startvshow.com/v13/' + path , 
-        // url: 'https://startvshow.com/v13/' + path, 
+        url: 'http://192.168.16.23:8000/api/' + path , 
         data: data,
         header: {
             'content-type': 'application/x-www-form-urlencoded'

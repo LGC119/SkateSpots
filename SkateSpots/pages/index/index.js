@@ -36,7 +36,7 @@ Page({
     // Do something when page ready.
   },
   onShow: function() {
-    // this.getList()
+    this.getList()
   },
   onHide: function() {
     // Do something when page hide.
@@ -68,20 +68,26 @@ Page({
     hi: 'MINA'
   },
   getList() {
-    const list = [];
-    utils.sendRequest('spot', [{count: 100}], 'get', function (rst) {
-      for (var i = rst.page_data.length - 1; i >= 0; i--) {
-        let item = rst.page_data[i];
-        arr.push({
-            iconPath: "/resources/pin.png",
-            id: item.id,
-            latitude: item.latitude,
-            longitude: item.longitude,
-            width: 35,
-            height: 35
-        })
-      }
-      this.setData()
+      utils.sendRequest("spot", [{count: 100}], "GET", this.handleGetPointsSucc.bind(this))
+  },
+
+  handleGetPointsSucc(res) {
+    console.log(res)
+    var spots = res.data.spots
+    var arr = []
+    for (var i = spots.length - 1; i >= 0; i--) {
+      let item = spots[i];
+      arr.push({
+          iconPath: "/resources/pin.png",
+          id: item.id,
+          latitude: item.latitude,
+          longitude: item.longitude,
+          width: 35,
+          height: 35
+      })
+    }
+    this.setData({
+      markers: arr
     })
-  }
+  },
 })
