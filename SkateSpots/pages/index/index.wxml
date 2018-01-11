@@ -1,7 +1,33 @@
 <!--index.wxml-->
-<view class='container'>
-  <view class='map-header'></view>
-  <view class='map-content'>
-    <map id='map' bindmarkertap='markertap' controls="{{controls}}" scale="14" show-location include-points="{{markers}}" bindcontroltap="controlTap"  markers="{{markers}}" bindmarkertap="handleMarkerTap"></map>
-  </view>
+<view class="container">
+    <view class="map-con">
+        <map id="myMap" class="map" longitude="{{longitude}}" latitude="{{latitude}}" controls="{{controls}}" scale="14" show-location bindcontroltap="controlTap"  markers="{{markers}}" bindmarkertap="handleMarkerTap"></map> 
+    </view>
+    <view class="btn">
+        <view class="btn-item">
+            <navigator url="/pages/detail/detail">
+        	<image src="/resources/ditu.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            </navigator>
+        </view>
+        <view class="btn-item">
+            <navigator url="/pages/detail/detail">
+        	<image src="/resources/center.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            </navigator>
+        </view>
+        <view class="btn-item">
+            <navigator url="/pages/detail/detail">
+        	<image src="/resources/fabu.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            </navigator>
+        </view>
+        <view class="btn-item">
+            <navigator url="/pages/detail/detail">
+        	<image src="/resources/list.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            </navigator>
+        </view>
+        <view class="btn-item">
+            <navigator url="/pages/detail/detail">
+        	<image src="/resources/user.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            </navigator>
+        </view>
+    </view>
 </view>

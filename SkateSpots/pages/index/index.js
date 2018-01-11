@@ -3,32 +3,31 @@ const app = getApp()
 const utils = require("../../utils/util.js");
 
 Page({
-  data: {
-    controls: [
-      {
-        id: 1,
-        iconPath: '/resources/center.png',
-        position: {
-          left: 20,
-          top: app.globalData.deviceHeight - 80,
-          width: 20,
-          height: 20
-        },
-        clickable: true
-      },
-      {
-        id: 2,
-        iconPath: '/resources/add_blue.png',
-        position: {
-          left: app.globalData.deviceWidth/2 - 40,
-          top: app.globalData.deviceHeight - 130,
-          width: 80,
-          height: 80
-        },
-        clickable: true
-      }
-    ]
-  },
+    data:{
+        "longitude":"113.324520",
+        "latitude":"23.099994",
+        "markers":[],
+        "controls": [{
+                id: 1,
+                iconPath: '/resources/pin.png',
+                position: {
+                    left: (app.globalData.deviceWidth / 2) - 11,
+                    top: ((app.globalData.deviceHeight - 40) / 2) - 31,
+                    width: 22,
+                    height: 31
+                }
+            },{
+                id: 2,
+                iconPath: '/resources/center.png',
+                position: {
+                    left: 20,
+                    top: app.globalData.deviceHeight - 82,
+                    width: 24,
+                    height: 24
+                },
+            clickable: true
+        }]
+    },
   onLoad: function(options) {
     // Do some initialize when page load.
   },
