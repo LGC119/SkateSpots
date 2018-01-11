@@ -1,6 +1,6 @@
 //index.js
-//获取应用实例
 const app = getApp()
+const request = "../../utils/request.js"
 
 Page({
   data: {
@@ -36,7 +36,7 @@ Page({
     // Do something when page ready.
   },
   onShow: function() {
-    // Do something when page show.
+    this.getList()
   },
   onHide: function() {
     // Do something when page hide.
@@ -66,5 +66,22 @@ Page({
   },
   customData: {
     hi: 'MINA'
+  },
+  getList: function () {
+    const list = [];
+    request.doRequest('spot', [{count: 100}], 'get', function (rst) {
+      for (var i = rst.page_data.length - 1; i >= 0; i--) {
+        let item = rst.page_data[i];
+        arr.push({
+            iconPath: "/resources/pin.png",
+            id: item.id,
+            latitude: item.latitude,
+            longitude: item.longitude,
+            width: 35,
+            height: 35
+        })
+      }
+      this.setData()
+    })
   }
 })
