@@ -1,6 +1,6 @@
 //index.js
 const app = getApp()
-const request = "../../utils/request.js"
+const utils = require("../../utils/util.js");
 
 Page({
   data: {
@@ -36,7 +36,7 @@ Page({
     // Do something when page ready.
   },
   onShow: function() {
-    this.getList()
+    // this.getList()
   },
   onHide: function() {
     // Do something when page hide.
@@ -67,9 +67,9 @@ Page({
   customData: {
     hi: 'MINA'
   },
-  getList: function () {
+  getList() {
     const list = [];
-    request.doRequest('spot', [{count: 100}], 'get', function (rst) {
+    utils.sendRequest('spot', [{count: 100}], 'get', function (rst) {
       for (var i = rst.page_data.length - 1; i >= 0; i--) {
         let item = rst.page_data[i];
         arr.push({

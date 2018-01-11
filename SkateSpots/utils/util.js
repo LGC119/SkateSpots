@@ -1,19 +1,17 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+// ajax
+function sendRequest(path, data, method, callback) {
+    wx.request({
+        url: 'https://test.startvshow.com/v13/' + path , 
+        // url: 'https://startvshow.com/v13/' + path, 
+        data: data,
+        header: {
+            'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: method,
+        success: callback
+    })
 }
 
 module.exports = {
-  formatTime: formatTime
+    sendRequest: sendRequest,
 }
