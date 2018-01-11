@@ -77,8 +77,9 @@ Page({
     var arr = []
     for (var i = spots.length - 1; i >= 0; i--) {
       let item = spots[i];
+      var iconPath = (item.type == 1) ? "/resources/park-icon.png" : "/resources/street-icon.png";
       arr.push({
-          iconPath: "/resources/pin.png",
+          iconPath: iconPath,
           id: item.id,
           latitude: item.latitude,
           longitude: item.longitude,

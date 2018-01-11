@@ -2,6 +2,6 @@
 <view class='container'>
   <view class='map-header'></view>
   <view class='map-content'>
-    <map id='map' bindmarkertap='markertap' controls="{{controls}}" scale="14" show-location="true" bindcontroltap="controlTap"  markers="{{markers}}" bindmarkertap="handleMarkerTap"></map>
+    <map id='map' bindmarkertap='markertap' controls="{{controls}}" scale="14" show-location include-points="{{markers}}" bindcontroltap="controlTap"  markers="{{markers}}" bindmarkertap="handleMarkerTap"></map>
   </view>
 </view>
