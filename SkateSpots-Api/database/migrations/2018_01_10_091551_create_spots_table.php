@@ -16,7 +16,8 @@ class CreateSpotsTable extends Migration
         Schema::create('spots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->comment('名称');
-            $table->string('latitude')->comment('维度');
+            $table->string('cover')->comment('图片');
+            $table->string('latitude')->comment('纬度');
             $table->string('longitude')->comment('经度');
             $table->tinyInteger('type')->default(1)->comment('类型;1滑板场;2街头;');
             $table->integer('user_id')->unsigned()->comment('上传者');

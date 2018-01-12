@@ -31,16 +31,6 @@ class SpotController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,7 +38,13 @@ class SpotController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            Spot::create($request->all());
+        } catch (Exception $e) {
+            Log::error('创建失败'.$e->getMessage());
+            return response()->json('store failed', 500);
+        }
+        return response()->json('store success');
     }
 
     /**
@@ -59,40 +55,7 @@ class SpotController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $spot = Spot::with('user')->findOrFail($id);
+        return response()->json($spot);
     }
 }
