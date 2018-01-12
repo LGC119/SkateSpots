@@ -5,7 +5,6 @@
   left: 0;
   right: 0;
   bottom: 90rpx;
-  background: red;
 }
 .map{
   width: 100%;
