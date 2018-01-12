@@ -10,8 +10,8 @@
             </navigator>
         </view>
         <view class="btn-item">
-            <navigator url="/pages/detail/detail">
-        	<image src="/resources/center.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
+            <navigator url="/pages/list/list">
+        	<image src="/resources/list.png" mode="aspectFill" style="width: 60rpx; height: 60rpx;  overflow: hidden;"></image>
             </navigator>
         </view>
         <view class="btn-item">

@@ -1,1 +1,118 @@
 /* pages/list/list.wxss */
+page {
+	background: #eeeeee;
+}
+.sort-list {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	width: 100%;
+	height: 80rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+    background: #fff;
+}
+.sort-list view {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 80rpx;
+	text-align: center;
+}
+.select {
+	color: #d81e06;
+}
+.sort-list image {
+    width: 40rpx; 
+    height: 40rpx;  
+    margin-right: 20rpx;
+    overflow: hidden;
+}
+.list-con {
+	width: 100%;
+	background: #eeeeee;
+	box-sizing: border-box;
+}
+.list-con .list-item:nth-child(1) {
+	border-top: none;
+}
+.list-item {
+	width: 100%;
+	padding: 38rpx;
+	padding-bottom: 0;
+	box-sizing: border-box;
+	margin-bottom: 20rpx;
+	border-top: 1rpx solid #e8e8e8;
+	border-bottom: 1rpx solid #e8e8e8;
+	background: #fff;
+}
+.list-item-head {
+	width: 100%;
+	height: 100rpx;
+	display: flex;
+	flex-flow: row nowrap;
+	margin-bottom: 20rpx;
+}
+.user-pic {
+	width: 100rpx;
+	height: 100rpx;
+	border: 1rpx solid #e8e8e8;
+	border-radius: 50rpx;
+	overflow: hidden;
+}
+.user-pic image {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 50rpx;
+}
+.head-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 10rpx 0;
+    margin-left: 20rpx;
+	font-size: 26rpx;
+	color: #ef6b18;
+}
+.user-name {
+	font-size: 30rpx;
+    font-weight: bold;
+}
+.time {
+    color: #b4b4b4;
+}
+.item-con-wrap {
+	width: 60%;
+	font-size: 30rpx;
+	color: #343434;
+	margin-bottom: 20rpx;
+}
+.item-img-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin-top: 20rpx;
+}
+.item-bottom {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	border-top: 1rpx solid #e8e8e8;
+	font-size: 28rpx;
+	color: #767676;
+}
+.item-bottom view {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 80rpx;
+	text-align: center;
+}
+.item-bottom view image {
+	width: 50rpx;
+	height: 50rpx;
+	margin-right: 20rpx;
+}

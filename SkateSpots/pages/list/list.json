@@ -1,4 +1,6 @@
 {
-  "component": true,
-  "usingComponents": {}
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "列表",
+    "navigationBarTextStyle": "white",
+    "disableScroll": false
 }

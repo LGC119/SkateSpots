@@ -1,2 +1,43 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="container">
+	<view class="sort-list">
+		<view class="hot select">
+			<image src="/resources/hot-red.png" mode="aspectFill"></image>
+			<text>最热</text>
+		</view>
+		<view class="new">
+			<image src="/resources/new.png" mode="aspectFill"></image>
+			<text>最新</text>
+		</view>
+	</view>
+	<view class="list-con">
+		<block wx:for="{{listResult}}">
+			<view class="list-item" wx:key="{{item.id}}">
+				<view class="list-item-head">
+					<view class="user-pic"><image src="{{item.userPic}}" mode="aspectFill"></image></view>
+					<view class="head-right">
+						<text class="user-name">{{item.name}}</text>
+						<text class="time">{{item.time}}</text>
+					</view>
+				</view>
+				<view class="item-con-wrap">
+					<view class="item-con">{{item.name}}</view>
+					<view class="item-img-wrap">
+						<image src="{{item.image}}" mode="aspectFill"></image>
+					</view>
+				</view>
+				<view class="item-bottom">
+					<view class="read">
+						<image src="/resources/read.png" mode="aspectFill"></image>
+						<text>{{item.read}}</text>
+					</view>
+					<view class="like">
+						<image src="/resources/zan.png" mode="aspectFill"></image>
+						<text>{{item.like}}</text>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+</view>
