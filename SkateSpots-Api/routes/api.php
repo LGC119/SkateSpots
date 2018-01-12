@@ -14,3 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('spot', 'SpotController');
+
+Route::get('user/home', 'UserController@home');
