@@ -15,7 +15,13 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->comment('昵称');
+            $table->string('avatarUrl')->comment('头像');
+            $table->string('gender')->default('1')->comment('性别');
+            $table->string('city')->default('北京')->comment('城市');
+            $table->string('province')->default('北京')->comment('城市');
+            $table->string('country')->default('中国')->comment('城市');
+            $table->string('openid');
             $table->timestamps();
         });
     }
